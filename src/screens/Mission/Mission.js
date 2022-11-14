@@ -12,7 +12,6 @@ const Mission = () => {
     dispatch(getMissions());
   // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
-
   return (
     <table className={styles.mission_table_wrapper}>
       <thead>
@@ -25,7 +24,12 @@ const Mission = () => {
       <tbody>
         {missions.map((item) => (
           <tr className={styles.mission_table_rows} key={item.id}>
-            <OneMission name={item.name} description={item.description} />
+            <OneMission
+              id={item.id}
+              name={item.name}
+              description={item.description}
+              reserved={item.reserved}
+            />
           </tr>
         ))}
       </tbody>
