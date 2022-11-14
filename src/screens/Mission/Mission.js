@@ -1,25 +1,17 @@
-import React from 'react';
+import React, { useEffect } from 'react';
+import { useSelector, useDispatch } from 'react-redux';
 import OneMission from '../../components/OneMission/OneMission';
+import { getMissions } from '../../redux/missions/missions';
 import styles from './mission.module.css';
 
 const Mission = () => {
-  const missions = [
-    {
-      id: 1,
-      name: 'Sebulba',
-      description: 'is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.',
-    },
-    {
-      id: 2,
-      name: 'Sebulba',
-      description: 'is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.',
-    },
-    {
-      id: 3,
-      name: 'Sebulba',
-      description: 'is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.',
-    },
-  ];
+  const missions = useSelector((state) => state.mission);
+  const dispatch = useDispatch();
+
+  useEffect(() => {
+    dispatch(getMissions());
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
 
   return (
     <table className={styles.mission_table_wrapper}>
