@@ -1,24 +1,24 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 import styles from './navBar.module.css';
 
 function NavBar() {
   return (
-    <div>
+    <div className={styles.navbar_wrapper}>
       <div className={styles.navContainer}>
-        <img src="planet.png" alt="logo" />
-        <h1>Space Travelers&quot; Hub</h1>
+        <img className={styles.navbar_img} src="planet.png" alt="logo" />
+        <h1>Space Travelers&apos; Hub</h1>
       </div>
-      <ul>
+      <ul className={styles.navlinks}>
         <li>
-          <Link to="/">Rockets</Link>
+          <NavLink activeClassName={styles.active} className={styles.links} to="/">Rockets</NavLink>
         </li>
         <li>
-          <Link to="/missions"> Missions </Link>
+          <NavLink activeClassName={styles.active} className={styles.links} to="/missions"> Missions </NavLink>
         </li>
 
         <li>
-          <Link to="/myprofile">My Profile</Link>
+          <NavLink activeClassName={styles.active} className={styles.profilelinks} to="/myprofile">My Profile</NavLink>
 
         </li>
       </ul>
