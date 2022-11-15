@@ -45,3 +45,20 @@
   cursor: pointer;
   background-color: #1c4473;
 }
+
+.cancelRocketBtn {
+  height: 2.5rem;
+  width: 13rem;
+  font-size: 1.2rem;
+  background-color: #f9f9f9;
+  color: rgb(150 139 139);
+  border: 1px solid #cdbdbd;
+  border-radius: 4px;
+  bottom: 0;
+  position: absolute;
+  margin-bottom: 2rem;
+}
+
+.cancelRocketBtn:hover {
+  cursor: pointer;
+}
