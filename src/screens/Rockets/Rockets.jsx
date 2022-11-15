@@ -3,10 +3,16 @@ import { useSelector, useDispatch } from 'react-redux';
 import { getRockets } from '../../redux/rockets/rockets';
 import RocketCard from '../../components/RocketCard/RocketCard';
 
+let render = true;
+
 function Rockets() {
   const dispatch = useDispatch();
 
   useEffect(() => {
+    if (!render) {
+      return;
+    }
+    render = false;
     dispatch(getRockets());
   }, [dispatch]);
 

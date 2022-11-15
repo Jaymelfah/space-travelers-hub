@@ -18,3 +18,10 @@
   border-bottom: 1px solid  #e3e3e3;
   padding: 1.5rem;
 }
+
+.reservedRocket {
+  border-bottom: 1px solid  #e3e3e3;
+  padding: 1.5rem;
+  height: 1.2rem;
+  width: 33rem;
+}
