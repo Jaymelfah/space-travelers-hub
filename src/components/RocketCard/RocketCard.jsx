@@ -17,7 +17,10 @@ function RocketCard({ rocket }) {
       <img src={imgs[0]} alt="rocketImg" className={styles.rocketImg} />
       <div className={styles.rocketDetails}>
         <h5 className={styles.rocketTitle}>{name}</h5>
-        <p className={styles.rocketDescription}>{description}</p>
+        <p className={styles.rocketDescription}>
+          {rocket.reserved && <span className={styles.reservedBadge}>Reserved</span>}
+          {description}
+        </p>
         {!rocket.reserved && (
           <button
             type="button"
