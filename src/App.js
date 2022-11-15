@@ -2,6 +2,7 @@ import { Route, Routes } from 'react-router';
 import NavBar from './components/navBar/NavBar';
 import Rockets from './screens/Rockets/Rockets';
 import Mission from './screens/Mission/Mission';
+import Profile from './screens/Profile/Profile';
 import './App.css';
 
 function App() {
@@ -11,7 +12,7 @@ function App() {
       <Routes>
         <Route path="/" element={<Rockets />} />
         <Route exact path="/missions" element={<Mission />} />
-        <Route path="/myprofile" />
+        <Route path="/myprofile" element={<Profile />} />
       </Routes>
     </div>
   );

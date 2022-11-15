@@ -31,11 +31,16 @@ const OneMission = (props) => {
     </>
   );
 };
+
+OneMission.defaultProps = {
+  reserved: null,
+};
+
 OneMission.propTypes = {
   name: PropTypes.string.isRequired,
   description: PropTypes.string.isRequired,
   id: PropTypes.string.isRequired,
-  reserved: PropTypes.bool.isRequired,
+  reserved: PropTypes.bool,
 };
 
 export default OneMission;
