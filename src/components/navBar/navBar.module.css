@@ -30,12 +30,6 @@
   margin-right: 4rem;
   width: 25%;
 }
-.links:focus {
-  text-decoration: underline;
-}
-.profilelinks:focus {
-  text-decoration: underline;
-}
 
 .links,
 .profilelinks {

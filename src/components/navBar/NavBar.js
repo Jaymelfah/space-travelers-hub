@@ -2,6 +2,10 @@ import React from 'react';
 import { NavLink } from 'react-router-dom';
 import styles from './navBar.module.css';
 
+const activeStyle = {
+  textDecoration: 'underline',
+};
+
 function NavBar() {
   return (
     <div className={styles.navbar_wrapper}>
@@ -11,15 +15,34 @@ function NavBar() {
       </div>
       <ul className={styles.navlinks}>
         <li>
-          <NavLink className={styles.links} to="/">Rockets</NavLink>
+          <NavLink
+            style={({ isActive }) => (isActive ? activeStyle : undefined)}
+            className={styles.links}
+            to="/"
+          >
+            Rockets
+          </NavLink>
         </li>
         <li>
-          <NavLink className={styles.links} to="/missions"> Missions </NavLink>
+          <NavLink
+            style={({ isActive }) => (isActive ? activeStyle : undefined)}
+            className={styles.links}
+            to="/missions"
+          >
+            {' '}
+            Missions
+            {' '}
+          </NavLink>
         </li>
 
         <li>
-          <NavLink className={styles.profilelinks} to="/myprofile">My Profile</NavLink>
-
+          <NavLink
+            style={({ isActive }) => (isActive ? activeStyle : undefined)}
+            className={styles.profilelinks}
+            to="/myprofile"
+          >
+            My Profile
+          </NavLink>
         </li>
       </ul>
     </div>
