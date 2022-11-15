@@ -11,14 +11,14 @@ function NavBar() {
       </div>
       <ul className={styles.navlinks}>
         <li>
-          <NavLink activeclassname={styles.active} className={styles.links} to="/">Rockets</NavLink>
+          <NavLink className={styles.links} to="/">Rockets</NavLink>
         </li>
         <li>
-          <NavLink activeclassname={styles.active} className={styles.links} to="/missions"> Missions </NavLink>
+          <NavLink className={styles.links} to="/missions"> Missions </NavLink>
         </li>
 
         <li>
-          <NavLink activeclassname={styles.active} className={styles.profilelinks} to="/myprofile">My Profile</NavLink>
+          <NavLink className={styles.profilelinks} to="/myprofile">My Profile</NavLink>
 
         </li>
       </ul>

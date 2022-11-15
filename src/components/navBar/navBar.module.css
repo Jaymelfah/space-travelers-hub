@@ -30,9 +30,11 @@
   margin-right: 4rem;
   width: 25%;
 }
-
-.active {
-  text-decoration: underline !important;
+.links:focus {
+  text-decoration: underline;
+}
+.profilelinks:focus {
+  text-decoration: underline;
 }
 
 .links,
