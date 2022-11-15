@@ -1,0 +1,29 @@
+.rocketCardContainer {
+    display: flex;
+    flex-direction: row;
+    gap: 24px;
+    align-items: center;
+}
+
+.rocketImg {
+    height: 50px;
+    width: 50px;
+}
+
+.rocketTitle {
+    font-size: 20px;
+}
+
+.rocketDescription {
+    font-weight: 300;
+}
+
+.reserveRocketBtn {
+    height: 2rem;
+    width: 8.5rem;
+    font-size: 1rem;
+    border: none;
+    background-color: #1680fe;
+    color: white;
+    border-radius: 4px;
+}
