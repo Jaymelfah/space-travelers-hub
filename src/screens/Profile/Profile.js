@@ -33,7 +33,7 @@ function Profile() {
       </div>
 
       <div className={styles.rockets_container}>
-        <h1>Rockets</h1>
+        <h1>My Rockets</h1>
         {rocketsReserved.length === 0 && <p>No Rockets reserved yet...</p>}
         <div style={reservedRocketsstyling}>
           {rocketsReserved.map((rocket) => (
