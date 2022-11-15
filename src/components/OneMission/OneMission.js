@@ -15,14 +15,15 @@ const OneMission = (props) => {
     <>
       <td className={styles.nameData}>{ name }</td>
       <td className={styles.onemission_description}>{ description }</td>
-      <td className={styles.notmember}><span>Not A Member</span></td>
+      {reserved && <td className={styles.member}><span>ACTIVE MEMBER</span></td>}
+      {!reserved && <td className={styles.notmember}><span>NOT A MEMBER</span></td>}
       <td className={styles.joinmission}>
         {
           !reserved ? (
-            <button onClick={() => dispatch(joinMission(id))} type="button">Join Mission</button>
+            <button className={styles.joinbtn} onClick={() => dispatch(joinMission(id))} type="button">Join Mission</button>
           )
             : (
-              <button onClick={() => dispatch(leaveMission(id))} type="button">Leave Mission</button>
+              <button className={styles.leavebtn} onClick={() => dispatch(leaveMission(id))} type="button">Leave Mission</button>
             )
         }
 
