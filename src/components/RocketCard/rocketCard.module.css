@@ -27,3 +27,9 @@
     color: white;
     border-radius: 4px;
 }
+
+.reserveRocketBtn:hover {
+    cursor: pointer;
+    background-color: #1c4473;
+
+}
