@@ -4,14 +4,20 @@ import OneMission from '../../components/OneMission/OneMission';
 import { getMissions } from '../../redux/missions/missions';
 import styles from './mission.module.css';
 
+let render = true;
 const Mission = () => {
   const missions = useSelector((state) => state.mission);
   const dispatch = useDispatch();
 
+  // Do not render missions page when page navigates
   useEffect(() => {
+    if (!render) {
+      return;
+    }
+    render = false;
     dispatch(getMissions());
-  // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, []);
+  }, [dispatch]);
+
   return (
     <table className={styles.mission_table_wrapper}>
       <thead>
