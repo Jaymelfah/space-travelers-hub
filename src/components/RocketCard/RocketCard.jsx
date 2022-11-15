@@ -1,6 +1,6 @@
 import React from 'react';
 import { useDispatch } from 'react-redux';
-import PropTypes, { number, string } from 'prop-types';
+import PropTypes, { string } from 'prop-types';
 import { reservedRocket, canceledRocket } from '../../redux/rockets/rockets';
 import styles from './rocketCard.module.css';
 
@@ -18,7 +18,9 @@ function RocketCard({ rocket }) {
       <div className={styles.rocketDetails}>
         <h5 className={styles.rocketTitle}>{name}</h5>
         <p className={styles.rocketDescription}>
-          {rocket.reserved && <span className={styles.reservedBadge}>Reserved</span>}
+          {rocket.reserved && (
+            <span className={styles.reservedBadge}>Reserved</span>
+          )}
           {description}
         </p>
         {!rocket.reserved && (
@@ -45,7 +47,13 @@ function RocketCard({ rocket }) {
 }
 
 RocketCard.propTypes = {
-  rocket: PropTypes.objectOf(string, number).isRequired,
+  rocket: PropTypes.shape({
+    name: PropTypes.string,
+    id: PropTypes.number,
+    description: PropTypes.string,
+    reserved: PropTypes.bool,
+    imgs: PropTypes.arrayOf(string),
+  }).isRequired,
 };
 
 export default RocketCard;

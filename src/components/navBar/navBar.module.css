@@ -31,10 +31,6 @@
   width: 25%;
 }
 
-.active {
-  text-decoration: underline !important;
-}
-
 .links,
 .profilelinks {
   text-decoration: none;
