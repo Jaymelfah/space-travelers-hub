@@ -17,7 +17,7 @@
 
 ## Live demo
 
-You can view a live demo of the project using this [link]().
+You can view a live demo of the project using this [link](https://sthub.netlify.app/).
 
 ## Getting Started
 
