@@ -42,7 +42,7 @@ Assuming you have git and node.js installed on your computer, please follow the 
 👤 **Jeremiah Melfah**
 
 - GitHub: [@Jaymelfah](https://github.com/Jaymelfah)
-- LinkedIn: [LinkedIn](https://linkedin.com/in/)
+- LinkedIn: [LinkedIn](https://www.linkedin.com/in/jeremiah-melfah)
 
 👤 **Kareem Magdy Wilson**
 
