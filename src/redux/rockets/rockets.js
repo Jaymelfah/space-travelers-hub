@@ -25,7 +25,7 @@ export const getRockets = createAsyncThunk(GET_ROCKETS, async () => {
   try {
     return await getRocketsFromAPI();
   } catch (error) {
-    return console.log(error);
+    return error;
   }
 });
 
